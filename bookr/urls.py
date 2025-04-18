@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path
 
 
-from reviews.views import welcome_view,hello_user
+from reviews.views import homepage
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', welcome_view),
-    path('query/', hello_user),
+    path('', homepage),
 
 ]

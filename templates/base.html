@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bookr{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bookr</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Default content if not overridden -->
+        <p>Welcome to our Bookr site!</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bookr, All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
