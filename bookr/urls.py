@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+from reviews.views import welcome_view,hello_user
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-from reviews.views import welcome_view
-urlpatterns = [
     path('', welcome_view),
+    path('query/', hello_user),
+
 ]

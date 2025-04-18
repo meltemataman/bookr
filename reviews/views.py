@@ -1,16 +1,8 @@
-from django.shortcuts import render
-
 # Create your views here.
 from django.http import HttpResponse
-
 def welcome_view(request):
-    return HttpResponse("Welcome to Bookr!")
+    return HttpResponse("Welcome to Bookrrrr!")
 
-def query_view(request):
-    value = request.GET.get('q', 'No query')
-    return HttpResponse(f"Query value: {value}")
-
-from django.shortcuts import render
-
-def welcome_view(request):
-    return render(request, "welcome.html")
+def hello_user(request):
+    name = request.GET.get("name", "Guest")
+    return HttpResponse(f"Hello, {name}!")
