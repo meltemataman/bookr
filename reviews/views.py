@@ -21,6 +21,20 @@ def personalized_welcome_view(request):
     }
     return render(request, 'personal_welcome.html', context)
 
+def crash_view(request):
+    # Force a ZeroDivisionError
+    result = 1 / 0
+    return HttpResponse(f"The result is {result}")
+
+def debug_example_view(request):
+    name = request.GET.get('name', 'Guest')
+    print(f"DEBUG: name received from request = {name}")  # 👈 print for debugging
+
+    upper_name = name.upper()
+    print(f"DEBUG: uppercased name = {upper_name}")  # 👈 another debug line
+
+    return HttpResponse(f"Hello, {upper_name}!")
+
 
 
 
