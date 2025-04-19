@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>personal welcome</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}Personalized Welcome{% endblock %}
+
+{% block content %}
+    <h2>Hello, {{ user_name }}! 👋</h2>
+    <p>Your favorite book is <strong>{{ favorite_book }}</strong>.</p>
+{% endblock %}
+</body>
+</html>

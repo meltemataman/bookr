@@ -5,14 +5,13 @@
 </head>
 <body>
     <main>
-        {% extends "base.html" %}
+       {% extends "base.html" %}
+        {% block title %}Welcome Page{% endblock %}
 
-        {% block title %}Home - Bookr{% endblock %}
-
-        {% block content %}
-        <h2>Welcome to Bookr!</h2>
-        <p>This is the homepage of the Bookr application. We provide a wide range of books!</p>
+        {% block content %}<h2>Hello, this is your first rendered template! 👋</h2>
+        <p>This page is coming from a Django template.</p>
         {% endblock %}
     </main>
+
 </body>
 </html>
