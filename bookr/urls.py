@@ -23,7 +23,8 @@ from reviews.views import(
     welcome_template_view,
     personalized_welcome_view,
     query_example_view,
-    crash_view
+    crash_view,
+    debug_example_view
 )
 
 urlpatterns = [
@@ -33,6 +34,7 @@ urlpatterns = [
     path('', home),
     path('personal/', personalized_welcome_view),
     path('crash/', crash_view),
+    path('broken/', debug_example_view),
 
 ]
 from reviews.views import debug_example_view

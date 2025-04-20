@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>personal welcome</title>
+  <title>Personal Welcome</title>
 </head>
 <body>
 {% extends "base.html" %}
@@ -11,7 +11,8 @@
 
 {% block content %}
     <h2>Hello, {{ user_name }}! 👋</h2>
-    <p>Your favorite book is <strong>{{ favorite_book }}</strong>.</p>
+    <p>There are  <strong>{{ book_count }}</strong> books registered in the system.</p>
+
 {% endblock %}
 </body>
 </html>

@@ -15,9 +15,11 @@ def home(request):
     return render(request, 'home.html')
 
 def personalized_welcome_view(request):
+    name = request.GET.get('name', 'Ziyaretçi')
+    book_count = request.GET.get('count', 0)
     context = {
-        'user_name': 'Meltem',
-        'favorite_book': 'The Little Prince'
+        'user_name': name,
+        'book_count': book_count
     }
     return render(request, 'personal_welcome.html', context)
 
@@ -27,13 +29,11 @@ def crash_view(request):
     return HttpResponse(f"The result is {result}")
 
 def debug_example_view(request):
-    name = request.GET.get('name', 'Guest')
-    print(f"DEBUG: name received from request = {name}")  # 👈 print for debugging
-
-    upper_name = name.upper()
-    print(f"DEBUG: uppercased name = {upper_name}")  # 👈 another debug line
-
-    return HttpResponse(f"Hello, {upper_name}!")
+    print("DEBUG: View çalışıyor...")
+    value = "not_a_number"
+    print(f"DEBUG: value = {value}")
+    number = int(value)  # burada hata
+    return HttpResponse(f"The number is {number}")
 
 
 
